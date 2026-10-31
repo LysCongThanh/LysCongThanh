@@ -1,24 +1,37 @@
-### Hi, I'm Thanh 👋
+```text
+most of my code is written by machines now.
+my work is the system around them.
+```
 
-Software engineer at **[DataZen Tech](https://datazen.vn)** in Can Tho, Vietnam. We're building a Vietnam-first platform that helps developers turn their apps into commercial SaaS.
+```text
+                         intent
+                            │
+                       ┌────┴────┐
+                       │  plan   │
+                       └────┬────┘
+        ┌─────────┬─────────┼─────────┬─────────┐
+      agent     agent     agent     agent      agent        dozens in flight · one human
+        │         │         │         │          │
+      tree      tree      tree      tree       tree         one git worktree each
+        │         │         │         │          │
+     db·port   db·port   db·port   db·port    db·port       nothing shared that can collide
+        └─────────┴────┬────┴─────────┴──────────┘
+                    ┌──┴──┐
+                    │queue│                                 priority · ram · load · machines
+                    └──┬──┘
+                  merge train
+                       │
+                     prod
+```
 
-Most days I run several AI coding agents in parallel, each in its own git worktree. The open-source tools below came out of the problems that creates.
+<sub>field notes</sub>
 
-### Open source
+- the expensive part of parallel agents isn't tokens. it's contention.
+- a lock that doesn't know priority is just a polite race.
+- the database is the real shared state. everything else is a file.
+- if two agents can collide, eventually they will — at 3am, on the one run that mattered.
+- the queue is the product.
 
-| Project | What it does |
-|---|---|
-| **[worktree-pg](https://github.com/LysCongThanh/worktree-pg)** | Gives every git worktree its own migrated Postgres database and dev ports, cloned from a template. Parallel agents stop sharing one database. |
-| **[teampane](https://github.com/LysCongThanh/teampane)** | A `tmux` shim that lets Claude Code Agent Teams split panes natively in kitty, WezTerm and zellij. |
-| **[migrate-lanes](https://github.com/LysCongThanh/migrate-lanes)** | Catches database migration collisions across worktrees and branches before you merge. |
-| **[awesome-parallel-agents](https://github.com/LysCongThanh/awesome-parallel-agents)** | A curated list of tools and patterns for running AI coding agents in parallel, safely. |
+<sub>parts of this machine are open source — pinned below.</sub>
 
-Issues, questions and PRs are welcome. The repos have `good first issue` labels if you want a place to start.
-
-### Stack
-
-Go · TypeScript / Node.js · NestJS · Next.js / React · Vue · PHP / Laravel · PostgreSQL · Docker · Kubernetes · Linux (kitty + zsh)
-
-### Contact
-
-📫 [thanhlc@datazen.vn](mailto:thanhlc@datazen.vn)
+<sub>systems @ [DataZen Tech](https://datazen.vn) · Vietnam · [thanhlc@datazen.vn](mailto:thanhlc@datazen.vn)</sub>
