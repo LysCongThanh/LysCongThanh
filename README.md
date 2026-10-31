@@ -1,17 +1,16 @@
 ```text
-dozens of coding agents, one machine.
+I build systems, and lately the systems
+that build systems.
 
-the rules that keep them from colliding:
+questions I keep coming back to:
 
-  one database per agent
-  one migration number per branch
-  no heavy job without the RAM to finish
-
-still figuring out:
-
-  when every job is urgent, who waits?
+  what should be shared, and what never?
+  who waits, when everything is urgent?
+  how small can a reliable system be?
+  what does a team look like when most
+  of it isn't human?
 ```
 
-Pinned below: what broke first, and what fixed it.
+notes and experiments are pinned below.
 
 <sub>thanhlc · [DataZen Tech](https://datazen.vn) · Vietnam</sub>
